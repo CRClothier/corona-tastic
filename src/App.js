@@ -1,27 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import WorldPage from './components/WorldPage';
+import CountryPage from './components/CountryPage';
+import { updateWorldThunk } from './Redux/World/WorldReducer';
+import { updateCountriesThunk } from './Redux/Countries/CountriesReducer';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(updateWorldThunk());
+  dispatch(updateCountriesThunk());
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<WorldPage />} />
+        <Route path="/:country" element={<CountryPage />} />
+      </Routes>
     </div>
   );
 }
