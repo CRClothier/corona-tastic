@@ -4,21 +4,21 @@ import DataCard from './DataCard';
 
 function CountryPage() {
   const { country } = useParams();
-  const countries = useSelector((state) => state.countries);
-  const countryDataArray = countries.filter((info) => info.name === country);
-  const countryData = countryDataArray[0];
+  const { countryData } = useSelector((state) => state.countries);
+  const countryDataArray = countryData.filter((info) => info.name === country);
+  const thisCountryData = countryDataArray[0];
 
   return (
     <div>
       <Link to="/">Back</Link>
       <h1>{country}</h1>
       <DataCard
-        totalDeath={countryData.deaths}
-        todayDeath={countryData.todayDeaths}
-        totalCases={countryData.cases}
-        todayCases={countryData.todayCases}
-        totalRecovered={countryData.recovered}
-        todayRecovered={countryData.todayRecovered}
+        totalDeath={thisCountryData.deaths}
+        todayDeath={thisCountryData.todayDeaths}
+        totalCases={thisCountryData.cases}
+        todayCases={thisCountryData.todayCases}
+        totalRecovered={thisCountryData.recovered}
+        todayRecovered={thisCountryData.todayRecovered}
       />
     </div>
   );

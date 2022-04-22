@@ -1,12 +1,13 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { orderByCases, orderByDeaths, orderByNames } from '../Redux/Countries/CountriesReducer';
 import CountryCard from './CountryCard';
 import DataCard from './DataCard';
 
 function WorldPage() {
+  const dispatch = useDispatch();
   const data = useSelector((state) => state.world);
-  const countryData = useSelector((state) => state.countries);
-  const continentsArray = countryData.map((country) => (
-
+  const state = useSelector((state) => state.countries);
+  const continentsArray = state.countryData.map((country) => (
     <CountryCard
       key={country.name}
       country={country.name}
@@ -14,6 +15,16 @@ function WorldPage() {
       flag={country.flag}
     />
   ));
+
+  const changeFilter = () => {
+    if (state.filter === 'Name') {
+      dispatch(orderByDeaths());
+    } else if (state.filter === 'Deaths') {
+      dispatch(orderByCases());
+    } else {
+      dispatch(orderByNames());
+    }
+  };
 
   return (
     <div className="world-page">
@@ -26,6 +37,12 @@ function WorldPage() {
         totalRecovered={data.recovered}
         todayRecovered={data.todayRecovered}
       />
+      <div>
+        <button type="button" onClick={() => changeFilter()}>
+          <p>Filter:</p>
+          <p>{state.filter}</p>
+        </button>
+      </div>
       {continentsArray}
     </div>
   );
