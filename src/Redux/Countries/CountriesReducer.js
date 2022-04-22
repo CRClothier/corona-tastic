@@ -51,12 +51,12 @@ export const updateCountriesThunk = () => (dispatch) => axios.get(API)
       name: country.country,
       flag: country.countryInfo.flag,
       cases: country.cases,
-      todayCases: 0,
-      deaths: 0,
-      todayDeaths: 0,
-      recovered: 0,
-      todayRecovered: 0,
-      active: 0,
+      todayCases: country.todayCases,
+      deaths: country.deaths,
+      todayDeaths: country.todayDeaths,
+      recovered: country.recovered,
+      todayRecovered: country.todayRecovered,
+      active: country.active,
     }));
     dispatch(updateCountries(newState));
   });
