@@ -31,7 +31,7 @@ function WorldPage() {
   return (
     <div className="world-page">
       <header>
-        <h1>World Data</h1>
+        <h1 title="World-Data">World Data</h1>
         <img className="icon" src={mic} alt="mic" />
         <img className="icon" src={gear} alt="mic" />
       </header>
