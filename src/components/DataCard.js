@@ -10,7 +10,7 @@ function DataCard(props) {
     todayRecovered,
   } = props;
   return (
-    <div>
+    <div className="data-card">
       <div>{`Total Deaths: ${totalDeath}`}</div>
       <div>{`Today Deaths: ${todayDeath}`}</div>
       <div>{`Total Cases: ${totalCases}`}</div>

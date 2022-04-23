@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { orderByCases, orderByDeaths, orderByNames } from '../Redux/Countries/CountriesReducer';
+import mic from '../images/mic.png';
+import gear from '../images/gear.png';
 import CountryCard from './CountryCard';
 import DataCard from './DataCard';
 
@@ -28,22 +30,30 @@ function WorldPage() {
 
   return (
     <div className="world-page">
-      <h1>Covid Data</h1>
-      <DataCard
-        totalDeath={data.deaths}
-        todayDeath={data.todayDeaths}
-        totalCases={data.cases}
-        todayCases={data.todayCases}
-        totalRecovered={data.recovered}
-        todayRecovered={data.todayRecovered}
-      />
+      <header>
+        <h1>World Data</h1>
+        <img className="icon" src={mic} alt="mic" />
+        <img className="icon" src={gear} alt="mic" />
+      </header>
+      <div className="world-data">
+        <img className="world-map" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Worldmap-blank.svg" alt="World Map" />
+        <DataCard
+          totalDeath={data.deaths}
+          todayDeath={data.todayDeaths}
+          totalCases={data.cases}
+          todayCases={data.todayCases}
+          totalRecovered={data.recovered}
+          todayRecovered={data.todayRecovered}
+        />
+      </div>
       <div>
         <button type="button" onClick={() => changeFilter()}>
-          <p>Filter:</p>
-          <p>{state.filter}</p>
+          <p className="filter">{`Filter by ${state.filter}`}</p>
         </button>
       </div>
-      {continentsArray}
+      <div className="container">
+        {continentsArray}
+      </div>
     </div>
   );
 }

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 function CountryCard(props) {
   const { country, cases, flag } = props;
   return (
-    <div>
+    <div className="country-card">
       <Link to={country}>
-        <h2>{country}</h2>
-        <p>{cases}</p>
-        <img src={flag} alt={country} />
+        <img className="flag" src={flag} alt={country} />
+        <h2 className="links">{country}</h2>
+        <p className="links">{cases}</p>
       </Link>
     </div>
   );
