@@ -1,6 +1,6 @@
 # CoronaVirus Data
 
-> #### A web application in mobile form consuming up to date data on coronavirus by country and globally from an API and displaying it following a design on behance. [Original design](https://www.behance.net/sakwadesignstudio) idea by Nelson Sakwa.
+> #### A web application in mobile form consuming up to date data on coronavirus by country and globally from an API and displaying it following a design on behance.
 
 ## Built With
 
@@ -31,6 +31,8 @@ Then `npm install` to install packages
 
 Finally `npm start`
 
+To test `npm test`
+
 ## Authors
 
 👤 **Chris Clothier**
@@ -52,3 +54,6 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+## Acknowledgement
+[Original design](https://www.behance.net/sakwadesignstudio) idea by Nelson Sakwa.
