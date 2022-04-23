@@ -1,4 +1,4 @@
-# Space Travelers
+# CoronaVirus Data
 
 > #### A web application in mobile form consuming up to date data on coronavirus by country and globally from an API and displaying it following a design on behance. [Original design](https://www.behance.net/sakwadesignstudio) idea by Nelson Sakwa.
 
@@ -17,7 +17,7 @@
 
 ## Live Demo 🌐
 
-### [Space Travelers Link]()
+### [CoronaVirus Data Link](https://iridescent-otter-9062e6.netlify.app)
 
 ## Getting Started
 
