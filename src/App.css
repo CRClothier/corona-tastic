@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(255, 50, 218);
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.flag {
+  width: 44vw;
+  height: 25vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header a {
+  align-self: center;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.4rem;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+header,
+button {
+  width: 100%;
+  background-color: rgb(212, 40, 181);
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+button {
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.filter {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.world-map {
+  width: 50vw;
+  height: 35vw;
+}
+
+.world-data {
+  display: flex;
+}
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-card {
+  background-color: rgb(178, 26, 150);
+  width: 44%;
+  padding: 3%;
+  text-align: right;
+}
+
+.country-card:nth-child(4n-2) {
+  background-color: rgb(156, 25, 132);
+}
+
+.country-card:nth-child(4n-1) {
+  background-color: rgb(156, 25, 132);
+}
+
+.country-data-card .data-card {
+  padding-left: 0;
+  width: 100%;
+}
+
+.country-data-card .data-card div {
+  background-color: rgb(178, 26, 150);
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.country-data-card .data-card div:nth-child(even) {
+  background-color: rgb(156, 25, 132);
+}
+
+.country-page .world-data {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.country-flag {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bar {
+  width: 100%;
+  background-color: rgb(212, 40, 181);
+  padding: 0.3rem;
+  padding-left: 1.5rem;
+}
+
+.country-page a {
+  margin-left: 1rem;
+}
